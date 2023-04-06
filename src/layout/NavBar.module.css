@@ -1,0 +1,34 @@
+.navbar {
+  margin: 0em auto;
+  padding: 2em;
+  background-color: #E5E4E2;
+  /* border: 1px solid black; */
+  width: 100%;
+  height: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.list {
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+.item {
+  margin: 1em;
+}
+
+.item a {
+  color: rgb(0, 0, 0);
+}
+
+.item a:hover {
+  color: #FFBE00;
+}
+
+.item svg{
+  width: 30px;
+  height: 30px;
+}
