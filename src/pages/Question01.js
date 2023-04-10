@@ -1,18 +1,36 @@
-import Container from '../layout/Container'
+import styles from "./Question.module.css";
+import ex01 from "../images/ex1.png";
+import Resolution01 from "../resolution/Resolution01";
+
+import { useState } from "react";
 
 function Exercicio01() {
+  const [showResolution, setShowResolution] = useState(false);
 
-  return(
-      <Container>
-        <h1>
-          Exercício 1
-        </h1>
-        <h2>
-          Qual a má prática no código abaixo e como melhorar este trecho de código?
-        </h2>
-        <img src='../images/ex01.png' alt='exercício 1'/>
-      </Container>
-  )
+  function toggleShowResolution() {
+    setShowResolution(!showResolution);
+  }
+
+  return (
+    <section className={styles.question}>
+      <div>
+        <h1>Questão 1</h1>
+        <p>
+          Qual a má prática no código abaixo e como melhorar este trecho de
+          código?
+        </p>
+        <div>
+          <img src={ex01} alt="questão 1" />
+        </div>
+      </div>
+
+      <button onClick={toggleShowResolution} className={styles.btn}>
+        {!showResolution ? "Ocultar Resolução" : "Mostrar Resolução"}
+      </button>
+
+      {!showResolution ? <Resolution01 /> : ""}
+    </section>
+  );
 }
 
-export default Exercicio01
+export default Exercicio01;

@@ -1,3 +1,5 @@
+import styles from './App.css'
+
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
 import Home from './pages/Home'
@@ -16,7 +18,7 @@ import NavBar from './layout/NavBar'
 function App() {
 
   return (
-    <BrowserRouter>
+    <BrowserRouter className={styles.app}>
 
     <NavBar/>
 

@@ -9,13 +9,11 @@ import {
   BsFill7SquareFill,
   BsHouseFill } from 'react-icons/bs'
 
-import Container from "./Container";
 import { Link } from 'react-router-dom'
 
 function NavBar() {
   return(
     <nav className={styles.navbar}>
-      <Container>
         <ul className={styles.list}>
           <li className={styles.item}>
             <Link to='/'> <BsHouseFill/> </Link>
@@ -41,9 +39,7 @@ function NavBar() {
           <li className={styles.item}>
           <Link to='/question07'> <BsFill7SquareFill/> </Link>
           </li>
-
         </ul>
-      </Container>
     </nav>
   )
 }

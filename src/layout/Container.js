@@ -3,7 +3,7 @@ import style from './Container.module.css'
 function Container({children}){
 
   return(
-    <article className={`${style.container}`}>
+    <article className={style.container}>
       <div>
         {children}
       </div>
