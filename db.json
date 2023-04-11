@@ -1,0 +1,154 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "number": 1,
+      "subject": "Atribuição de state em class component",
+      "statement": "Qual é a má prática no código abaixo e como melhorar este trecho de código?",
+      "img": {
+        "id": 1,
+        "caption": "código com má prática",
+        "url":"./src/images/ex1.png"
+      }
+    },
+    {
+      "id": 2,
+      "number": 2,
+      "subject": "Erro de uso no método useState",
+      "statement": "Por que o método setState não irá funcionar? O que é necessário para que funcione?",
+      "img": {
+        "id": 2,
+        "caption": "Erro de uso do useState",
+        "url":"./src/images/ex2.png"
+      }      
+    },
+    {
+      "id": 3,
+      "number": 3,
+      "subject": "má prática na utilização de function callback",
+      "statement": "Qual a má prática no código abaixo e o que valor do state “name” irá chegar no callback? O novo ou o antigo? Como deveria estar escrito este trecho de código?",
+      "img": {
+        "id": 3,
+        "caption": "código com erro na utilização de function callback",
+        "url":"./src/images/ex3.png"
+      }      
+    },
+    {
+      "id": 4,
+      "number": 4,
+      "subject": "mutação de props",
+      "statement": "O que está sendo feito errado no trecho de código abaixo e por que não deve ser feito?",
+      "img": {
+        "id": 4,
+        "caption": "código efetuando mutação de props",
+        "url":"./src/images/ex4.png"
+      }      
+    },
+    {
+      "id": 5,
+      "number": 5,
+      "subject": "erro no uso do hook useEffect",
+      "statement": "Corrija o trecho de código abaixo para que o state “count” seja atualizado quando o componente montar:",
+      "img": {
+        "id": 5,
+        "caption": "código com erro no hook useEffect",
+        "url":"./src/images/ex5.png"
+      }
+    },
+    {
+      "id": 6,
+      "number": 6,
+      "subject": "erro de sintaxe em função assíncrona",
+      "statement": "No trecho de código abaixo, a função asyncFunc é assincrona. O que falta para que este código funcione corretamente?",
+      "img": {
+        "id": 6,
+        "caption": "código com erro de sintaxe em função assíncrona",
+        "url":"./src/images/ex6.png"
+      }
+    },
+    {
+      "id": 7,
+      "number": 7,
+      "subject": "má pratica de não atribuição de key",
+      "statement": "Esse componente abaixo gera um erro no console ao renderizar, corrija a implementação para que não gere mais erro:",
+      "img": {
+        "id": 7,
+        "caption": "codigo onde o console gera erro de key",
+        "url":"./src/images/ex7.png"
+      }
+    }
+  ],
+
+  "resolutions": [
+    {
+      "id": 1,
+      "number": 1,
+      "response": "A má prática neste código e efetuar a atribuição diretamente utilizando o ‘this’. A melhor forma para atribuir atualizações ao state é utilizando o escopo funcional da seguinte forma:",
+      "img": {
+        "id": 1,
+        "caption": "resposta da questão 1",
+        "url":"./src/images/resp1.png"
+      }
+    },
+    {
+      "id": 2,
+      "number": 2,
+      "response": "Método setState não irá funcionar porque o state não foi declarado no construtor. Além disso a método de atualização do setState (updateMyState(myCallBack)) conta com uma má prática, podendo ser escrito no modelo do exercicio 01 (em forma de função). O melhor seria realizar a declaração no construtor para o setState ter o que alterar: ",
+      "img": {
+        "id": 2,
+        "caption": "resposta da questão 2",
+        "url":"./src/images/resp2.png"
+      }
+    },
+    {
+      "id": 3,
+      "number": 3,
+      "response": "A má prática no código consiste em não chamar o (myCallback) como função, fazendo com que não excute nada. O código ficaria funcional, escrito da seguinte forma abaixo, pois assim, retornaria o novo valor, passado no setState (“First Name”).",
+      "img": {
+        "id": 3,
+        "caption": "resposta da questão 3",
+        "url":"./src/images/resp3.png"
+      }
+    },
+    {
+      "id": 4,
+      "number": 4,
+      "response": "A atribuição de valor para prop.name é a má prática aplicada neste exemplo, pois vai de encontro com o conceito de imutabilidade. A mutação pode gerar erros de renderização do componente. ",
+      "img": {
+        "id": 4,
+        "caption": "resposta da questão 4",
+        "url":"./src/images/resp4.png"
+      }
+    },
+    {
+      "id": 5,
+      "number": 5,
+      "response": "A adição de colchetes ( [ ] ) como segundo argumento do hook useEffect, faz com que o componente monte ou atualize apenas quando o parâmetro é o alvo . A subtituição de “updateCount(count + 1)” por “updateCount((prevCount) => prevCount + 1)” é uma boa prática para melhor gerenciamento dos estados.",
+      "img": {
+        "id": 5,
+        "caption": "resposta da questão 5",
+        "url":"./src/images/resp5.png"
+      }
+    },
+    {
+      "id": 6,
+      "number": 6,
+      "response": "Para função se tornar assíncrona é necessário a adição do ‘async ’ e ‘await’ da seguinte forma: ",
+      "img": {
+        "id": 6,
+        "caption": "resposta da questão 6",
+        "url":"./src/images/resp6.png"
+      }
+    },
+    {
+      "id": 7,
+      "number": 7,
+      "response": "Erro gerado no console é gerado por não ter key atribuido.",
+      "img": {
+        "id": 7,
+        "caption": "resposta da questão 7",
+        "url":"./src/images/resp7.png"
+      }
+    }
+  ]
+}

@@ -14,6 +14,7 @@ import Question07 from './pages/Question07'
 import Footer from './layout/Footer'
 import Container from './layout/Container';
 import NavBar from './layout/NavBar'
+import Questions from './pages/Questions'
 
 function App() {
 
@@ -25,13 +26,14 @@ function App() {
     <Container>
       <Routes>
         <Route path='/' element={<Home/>}/>
-        <Route path='/question01' element={<Question01/>}/>
+        <Route path='/questions' element={<Questions/>}/>
+        {/* <Route path='/question01' element={<Question01/>}/>
         <Route path='/question02' element={<Question02/>}/>
         <Route path='/question03' element={<Question03/>}/>
         <Route path='/question04' element={<Question04/>}/>
         <Route path='/question05' element={<Question05/>}/>
         <Route path='/question06' element={<Question06/>}/>
-        <Route path='/question07' element={<Question07/>}/>
+        <Route path='/question07' element={<Question07/>}/> */}
       </Routes>
     </Container>
 

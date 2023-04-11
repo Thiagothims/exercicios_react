@@ -19,9 +19,10 @@ function NavBar() {
             <Link to='/'> <BsHouseFill/> </Link>
           </li>
           <li className={styles.item}>
-          <Link to='/question01'> <BsFill1SquareFill/> </Link>
+          {/* <Link to='/question01'> <BsFill1SquareFill/> </Link> */}
+          <Link to='/questions'> <BsFill2SquareFill/> </Link>
           </li>
-          <li className={styles.item}>
+          {/* <li className={styles.item}>
           <Link to='/question02'> <BsFill2SquareFill/> </Link>
           </li>
           <li className={styles.item}>
@@ -38,7 +39,7 @@ function NavBar() {
           </li>
           <li className={styles.item}>
           <Link to='/question07'> <BsFill7SquareFill/> </Link>
-          </li>
+          </li> */}
         </ul>
     </nav>
   )

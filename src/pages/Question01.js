@@ -12,7 +12,7 @@ function Exercicio01() {
   }
 
   return (
-    <section className={styles.question}>
+    <section className={styles.questions}>
       <div>
         <h1>Questão 1</h1>
         <p>
@@ -20,7 +20,7 @@ function Exercicio01() {
           código?
         </p>
         <div>
-          <img src={ex01} alt="questão 1" />
+          <img src={ex01} alt="questão 1" className={styles.img}/>
         </div>
       </div>
 
