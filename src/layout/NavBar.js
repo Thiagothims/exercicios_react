@@ -1,49 +1,24 @@
-import styles from './NavBar.module.css'
-import { 
-  BsFill1SquareFill, 
-  BsFill2SquareFill, 
-  BsFill3SquareFill, 
-  BsFill4SquareFill, 
-  BsFill5SquareFill, 
-  BsFill6SquareFill, 
-  BsFill7SquareFill,
-  BsHouseFill } from 'react-icons/bs'
+import styles from "./NavBar.module.css";
+import { BsHouseFill } from "react-icons/bs";
 
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom";
 
 function NavBar() {
-  return(
+  return (
     <nav className={styles.navbar}>
-        <ul className={styles.list}>
-          <li className={styles.item}>
-            <Link to='/'> <BsHouseFill/> </Link>
-          </li>
-          <li className={styles.item}>
-          {/* <Link to='/question01'> <BsFill1SquareFill/> </Link> */}
-          <Link to='/questions'> <BsFill2SquareFill/> </Link>
-          </li>
-          {/* <li className={styles.item}>
-          <Link to='/question02'> <BsFill2SquareFill/> </Link>
-          </li>
-          <li className={styles.item}>
-          <Link to='/question03'> <BsFill3SquareFill/> </Link>
-          </li>
-          <li className={styles.item}>
-          <Link to='/question04'> <BsFill4SquareFill/> </Link>
-          </li>
-          <li className={styles.item}>
-          <Link to='/question05'> <BsFill5SquareFill/> </Link>
-          </li>
-          <li className={styles.item}>
-          <Link to='/question06'> <BsFill6SquareFill/> </Link>
-          </li>
-          <li className={styles.item}>
-          <Link to='/question07'> <BsFill7SquareFill/> </Link>
-          </li> */}
-        </ul>
+      <Link className={styles.home} to="/">
+        <BsHouseFill />
+      </Link>
+      <ul className={styles.list}>
+        <li className={styles.item}>
+          <Link to="/questions"> Questões </Link>
+        </li>
+        <li className={styles.item}>
+          <Link to="/about"> Sobre o Projeto </Link>
+        </li>
+      </ul>
     </nav>
-  )
+  );
 }
 
-export default NavBar
-      
+export default NavBar;

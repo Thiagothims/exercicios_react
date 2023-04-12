@@ -1,0 +1,42 @@
+.card {
+  display: inline-flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  width: 190px;
+  height: 150px;
+  background-color: #fca311;
+  margin: 0.5em;
+  padding: 1em;
+  border: 2px solid #14213d;
+  border-radius: 15px;
+  text-decoration: none;
+}
+
+.card h3 {
+  color: #14213d;
+  margin-bottom: 1em;
+  font-weight: bolder;
+}
+
+.card p {
+  color: #14213d;
+  font-weight: 400;
+}
+
+.card:hover {
+  background-color: #14213d;
+  border: 3px solid #fca311;
+  transition: all 0.3s;
+  color: #fca311;
+  /* box-shadow: 1px 1px 5px #14213d; */
+}
+
+.card:hover h3 {
+  color: #fca311;
+}
+
+.card:hover p {
+  color: #fca311;
+  font-weight: 400;
+}

@@ -1,11 +1,11 @@
 .navbar {
   margin: 0em auto;
-  padding: 2em;
+  padding: 1.5em;
   background-color: #14213d;
   width: auto;
-  height: 10%;
+  height: 5%;
   display: flex;
-  justify-content: center;
+  justify-content:space-between;
   align-items: center;
 }
 
@@ -15,19 +15,32 @@
   align-items: center;
 }
 
+
 .item {
   margin: -0.3em 0.8em;
+  color: #fca311;
+  align-items: center;
+  text-decoration: none;
 }
 
 .item a {
-  color: #14213db0;
+  color: #fca311;
+  align-items: center;
+  text-decoration: none;
 }
 
-.item svg:hover {
+.item a:hover {
   color: #ffffff;
 }
 
-.item svg{
+.home {
+}
+
+.home svg:hover {
+  color: #ffffff;
+}
+
+.home svg{
   background-color: #14213db0;
   color: #fca311;
   width: 30px;

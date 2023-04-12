@@ -1,7 +1,11 @@
 import { useState, useEffect } from "react"
 
+import styles from './Questions.module.css'
+
+import CardQuestions from "../layout/CardQuestions"
+
 function Questions() {
-  const [questions, setQuestions] = useState()
+  const [questions, setQuestions] = useState([])
 
   useEffect(() => {
     fetch('http://localhost:5000/questions', {
@@ -20,12 +24,22 @@ function Questions() {
 
 
   return(
-    <div>
-      {questions.map((question) => (
-          <h1 key={question.id}>{question.id}</h1>
-        ))
-      }
-    </div>
+      <>
+      <div className={styles.question}>
+        <h1>Escolha uma questão</h1> 
+      </div>
+        {questions?.map((question) => (
+          <CardQuestions
+            id={question.id}
+            number={question.number}
+            subject={question.subject}
+            statement={question.statement}
+            img={question.img}
+            key={question.id}
+          />
+          ))
+        }
+      </>
   )
 }
 
