@@ -20,7 +20,6 @@ function Question() {
     })
       .then((resp) => resp.json())
       .then((data) => {
-        console.log(data);
         setQuestion(data);
       })
       .catch((err) => console.log(err));
