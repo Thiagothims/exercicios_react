@@ -2,28 +2,32 @@ import { useState, useEffect } from "react";
 
 import styles from "./Questions.module.css";
 
+import Loading from "../layout/Loading";
 import CardQuestions from "../layout/CardQuestions";
 
 function Questions() {
   const [questions, setQuestions] = useState([]);
+  const [removeLoading, setRemoveLoading] = useState(false);
 
   useEffect(() => {
-    fetch("http://localhost:5000/questions", {
-      method: "GET",
-      headers: {
-        "Content-Type": "aplication/json",
-      },
-    })
-      .then((resp) => resp.json())
-      .then((data) => {
-        setQuestions(data);
+    setTimeout(() => {
+      fetch("http://localhost:5000/questions", {
+        method: "GET",
+        headers: {
+          "Content-Type": "aplication/json",
+        },
       })
-      .catch((err) => console.log(err));
+        .then((resp) => resp.json())
+        .then((data) => {
+          setQuestions(data);
+          setRemoveLoading(true);
+        })
+        .catch((err) => console.log(err));
+    }, 600);
   }, []);
 
   return (
     <div className={styles.questions}>
-
       <div className={styles.questions_h1}>
         <h1>Escolha uma questão</h1>
       </div>
@@ -39,8 +43,8 @@ function Questions() {
             key={question.id}
           />
         ))}
+        {!removeLoading && <Loading />}
       </div>
-      
     </div>
   );
 }

@@ -1,15 +1,18 @@
 import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 
 import styles from "./Response.module.css";
 
-import { useParams } from "react-router-dom";
+import Loading from "../layout/Loading";
 
 function Response() {
   const { id } = useParams();
 
   const [response, setResponse] = useState([]);
+  const [removeLoading, setRemoveLoading] = useState(false);
 
   useEffect(() => {
+    setTimeout(() => {
     fetch(`http://localhost:5000/resolutions/${id}`, {
       method: "GET",
       headers: {
@@ -21,10 +24,11 @@ function Response() {
         setResponse(data);
       })
       .catch((err) => console.log(err));
+    }, 800)
   }, [id]);
 
   if (response.length === 0) {
-    return null;
+    return !removeLoading && <Loading />;
   }
 
   return (

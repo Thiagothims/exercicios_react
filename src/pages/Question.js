@@ -1,28 +1,33 @@
-import styles from "./Question.module.css";
-
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 
+import styles from "./Question.module.css";
+
 import Response from "../response/Response";
+import Loading from "../layout/Loading";
 
 function Question() {
   const { id } = useParams();
 
   const [question, setQuestion] = useState();
   const [showResponse, setShowResponse] = useState(true);
+  const [removeLoading, setRemoveLoading] = useState(false);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/questions/${id}`, {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-      },
-    })
-      .then((resp) => resp.json())
-      .then((data) => {
-        setQuestion(data);
+    setTimeout(() => {
+      fetch(`http://localhost:5000/questions/${id}`, {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
       })
-      .catch((err) => console.log(err));
+        .then((resp) => resp.json())
+        .then((data) => {
+          setQuestion(data);
+          setRemoveLoading(true)
+        })
+        .catch((err) => console.log(err));
+      }, 600)
   }, [id]);
 
   function toggleRespose() {
@@ -30,7 +35,7 @@ function Question() {
   }
 
   return (
-    <>
+    <>{!removeLoading && <Loading />}
       {question && (
         <div className={styles.question}>
           <div>
@@ -43,7 +48,9 @@ function Question() {
               alt={`imagem do código, questão ${question.number} - ${question.img.caption}`}
             />
           </div>
+          
         </div>
+        
       )}
 
       <div className={styles.btn_container}>
