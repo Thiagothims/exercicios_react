@@ -22,8 +22,9 @@ function Questions() {
   }, []);
 
   return (
-    <div className={styles.question}>
-      <div className={styles.question_h1}>
+    <div className={styles.questions}>
+
+      <div className={styles.questions_h1}>
         <h1>Escolha uma questão</h1>
       </div>
 
@@ -39,6 +40,7 @@ function Questions() {
           />
         ))}
       </div>
+      
     </div>
   );
 }

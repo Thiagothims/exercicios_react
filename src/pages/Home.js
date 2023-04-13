@@ -13,7 +13,6 @@ function Home() {
           React.js obitido na trilha de aprendizagem do programa de estágio da
           Soft Expert. Apresentando a resolução dos exercícios.
         </p>
-        <br />
         <p>
           A resolução da lista de exercícios foi realizada utilizando como base
           para o aprendizado videos e a documentação oficial do React,
@@ -22,7 +21,7 @@ function Home() {
 
         <div className={styles.btn}>
           <Link to={"/questions"}>
-            <h2>Click para ver a lista de questões!</h2>
+            <button>Click para ver a lista de questões!</button>
           </Link>
         </div>
       </div>
