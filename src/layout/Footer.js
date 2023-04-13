@@ -7,13 +7,13 @@ function Footer() {
     <footer className={styles.footer}>
       <ul className={styles.social}>
         <li>
-          <a href="https://github.com/Thiagothims" target="_blank">
+          <a href="https://github.com/Thiagothims" target="_blank" rel="noreferrer">
             {" "}
             <BsGithub />{" "}
           </a>
         </li>
         <li>
-          <a href="https://www.linkedin.com/in/thiagomattoss/" target="_blank">
+          <a href="https://www.linkedin.com/in/thiagomattoss/" target="_blank" rel="noreferrer">
             {" "}
             <BsLinkedin />{" "}
           </a>
