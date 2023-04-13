@@ -21,7 +21,7 @@ function Home() {
         </p>
         <div className={styles.btn}>
           <Link to={"/questions"}>
-            <button>Click para ver a lista de questões!</button>
+            <button>Vá para as questões!</button>
           </Link>
         </div>
       </div>
