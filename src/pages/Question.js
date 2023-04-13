@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 import styles from "./Question.module.css";
@@ -24,10 +24,10 @@ function Question() {
         .then((resp) => resp.json())
         .then((data) => {
           setQuestion(data);
-          setRemoveLoading(true)
+          setRemoveLoading(true);
         })
         .catch((err) => console.log(err));
-      }, 600)
+    }, 400);
   }, [id]);
 
   function toggleRespose() {
@@ -35,7 +35,8 @@ function Question() {
   }
 
   return (
-    <>{!removeLoading && <Loading />}
+    <>
+      {!removeLoading && <Loading />}
       {question && (
         <div className={styles.question}>
           <div>
@@ -48,16 +49,21 @@ function Question() {
               alt={`imagem do código, questão ${question.number} - ${question.img.caption}`}
             />
           </div>
-          
         </div>
-        
       )}
 
       <div className={styles.btn_container}>
         <div className={styles.border}></div>
-        <button onClick={toggleRespose} className={styles.btn}>
-          {!showResponse ? "Ocultar Resposta" : "Mostrar Resposta"}
-        </button>
+        <div className={styles.btn}>
+          <button onClick={toggleRespose}>
+            {!showResponse ? "Ocultar Resposta" : "Mostrar Resposta"}
+          </button>
+        </div>
+        <div className={styles.btn}>
+          <Link to={"/questions"}>
+            <button>Voltar para Questões</button>
+          </Link>
+        </div>
       </div>
 
       {!showResponse && (

@@ -1,18 +1,13 @@
-import styles from './Loading.module.css'
+import styles from "./Loading.module.css";
 
-import loading from '../img/loading.gif'
+import loading from "../img/loading.gif";
 
 function Loading() {
-
-  return(
+  return (
     <div className={styles.loader_container}>
-      <img
-      className={styles.loader}
-      src={loading}
-      alt="Loading"
-      />
+      <img className={styles.loader} src={loading} alt="Loading" />
     </div>
-  )
+  );
 }
 
-export default Loading
+export default Loading;

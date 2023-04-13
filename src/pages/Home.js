@@ -1,6 +1,7 @@
+import { Link } from "react-router-dom";
+
 import styles from "./Home.module.css";
 import { DiReact } from "react-icons/di";
-import { Link } from "react-router-dom";
 
 function Home() {
   return (
@@ -18,7 +19,6 @@ function Home() {
           para o aprendizado videos e a documentação oficial do React,
           disponivel em Learn React
         </p>
-
         <div className={styles.btn}>
           <Link to={"/questions"}>
             <button>Click para ver a lista de questões!</button>

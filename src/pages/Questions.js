@@ -23,7 +23,7 @@ function Questions() {
           setRemoveLoading(true);
         })
         .catch((err) => console.log(err));
-    }, 600);
+    }, 400);
   }, []);
 
   return (

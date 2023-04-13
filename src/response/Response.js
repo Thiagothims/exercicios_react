@@ -13,18 +13,19 @@ function Response() {
 
   useEffect(() => {
     setTimeout(() => {
-    fetch(`http://localhost:5000/resolutions/${id}`, {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-      },
-    })
-      .then((resp) => resp.json())
-      .then((data) => {
-        setResponse(data);
+      fetch(`http://localhost:5000/resolutions/${id}`, {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
       })
-      .catch((err) => console.log(err));
-    }, 800)
+        .then((resp) => resp.json())
+        .then((data) => {
+          setResponse(data);
+          setRemoveLoading(true);
+        })
+        .catch((err) => console.log(err));
+    }, 400);
   }, [id]);
 
   if (response.length === 0) {
@@ -44,6 +45,7 @@ function Response() {
               src={response.img.url}
               alt={`imagem do código, resposta da questão ${response.number} - ${response.img.caption}`}
             />
+            {!removeLoading && <Loading />}
           </div>
         </div>
       ) : (

@@ -1,7 +1,7 @@
-import styles from "./NavBar.module.css";
-import { BsHouseFill } from "react-icons/bs";
-
 import { Link } from "react-router-dom";
+
+import { BsHouseFill } from "react-icons/bs";
+import styles from "./NavBar.module.css";
 
 function NavBar() {
   return (

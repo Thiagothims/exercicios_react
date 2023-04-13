@@ -1,8 +1,7 @@
 .question {
   display: flex;
   height: 35%;
-  /* border-bottom: 1px solid #fca311;
-  box-shadow: 0.5px 10px #14213d; */
+  border-bottom: 1px solid #fca311;
 }
 
 .question h3 {
@@ -33,7 +32,7 @@
   justify-content: center;
 }
 
-.btn {
+.btn button {
   margin: 2em auto;
   color: #fca311;
   background-color: #14213d;
@@ -45,12 +44,7 @@
   transition: linear .2s;
 }
 
-.btn h2 {
-  color:#fca311;
-  font-size: 1.3em;
-}
-
-.btn:hover{
+.btn button:hover{
   box-shadow: 2px 5px 10px #14213dd7;
   border: 2px solid aliceblue;
   color: aliceblue;
