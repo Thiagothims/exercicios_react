@@ -17,6 +17,7 @@
   color: #14213d;
   margin-bottom: 1em;
   font-weight: bolder;
+  
 }
 
 .card p {
@@ -26,10 +27,10 @@
 
 .card:hover {
   background-color: #14213d;
-  border: 3px solid #fca311;
-  transition: all 0.3s;
+  border: 2px solid #fca311;
   color: #fca311;
-  /* box-shadow: 1px 1px 5px #14213d; */
+  /* transition: all 0.3s; */
+  box-shadow: 3px 3px 10px #14213d;
 }
 
 .card:hover h3 {

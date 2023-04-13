@@ -1,6 +1,11 @@
+.response_container {
+  display: flex;
+  height: 35%;
+}
+
 .response {
   margin-top: 2em;
-  display: inline-block;
+  /* display: inline-block; */
 }
 
 .response h4 {
@@ -13,10 +18,25 @@
   padding: .3em .5em;
   font-size: 1em;
   margin-bottom: 1em;
+  flex-direction: row;
 }
 
-
 .response p {
-  width: 1400px;
+  width: 1000px;
   height: auto;
+  text-align: justify;
+  margin-bottom: 1em;
+  margin-right: 10em;
+}
+
+.code img {
+  width: 400px;
+  border-radius: 15px;
+  transition: all 1s;
+}
+
+.code img:hover {
+  width: 500px;
+  box-shadow: 10px 10px 10px #fca311;
+  -webkit-transform: scale(1.3);
 }

@@ -1,32 +1,33 @@
-import { useState, useEffect } from "react"
+import { useState, useEffect } from "react";
 
-import styles from './Questions.module.css'
+import styles from "./Questions.module.css";
 
-import CardQuestions from "../layout/CardQuestions"
+import CardQuestions from "../layout/CardQuestions";
 
 function Questions() {
-  const [questions, setQuestions] = useState([])
+  const [questions, setQuestions] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:5000/questions', {
-      method: 'GET',
+    fetch("http://localhost:5000/questions", {
+      method: "GET",
       headers: {
-        'Content-Type': 'aplication/json'
+        "Content-Type": "aplication/json",
       },
     })
-    .then((resp) => resp.json())
-    .then((data) => {
-      setQuestions(data)
-    })
-    .catch((err) => console.log(err))
-  }, [])
+      .then((resp) => resp.json())
+      .then((data) => {
+        setQuestions(data);
+      })
+      .catch((err) => console.log(err));
+  }, []);
 
-
-  return(
-      <>
-      <div className={styles.question}>
-        <h1>Escolha uma questão</h1> 
+  return (
+    <div className={styles.question}>
+      <div className={styles.question_h1}>
+        <h1>Escolha uma questão</h1>
       </div>
+
+      <div className={styles.question_card}>
         {questions?.map((question) => (
           <CardQuestions
             id={question.id}
@@ -36,10 +37,10 @@ function Questions() {
             img={question.img}
             key={question.id}
           />
-          ))
-        }
-      </>
-  )
+        ))}
+      </div>
+    </div>
+  );
 }
 
-export default Questions
+export default Questions;

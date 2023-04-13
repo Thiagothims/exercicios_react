@@ -33,28 +33,31 @@ function Question() {
     <>
       {question && (
         <div className={styles.question}>
-          <h3>Questão {question.number}</h3>
-          <p>{question.statement}</p>
-          {/* <img
+          <div>
+            <h3>Questão {question.number}</h3>
+            <p>{question.statement}</p>
+          </div>
+          <div className={styles.code}>
+            <img
               src={question.img.url}
               alt={`imagem do código, questão ${question.number} - ${question.img.caption}`}
-            /> */}
+            />
+          </div>
         </div>
       )}
 
-      <aside>
-        <button onClick={toggleRespose} className={styles.btn} >
+      <div className={styles.btn_container}>
+        <div className={styles.border}></div>
+        <button onClick={toggleRespose} className={styles.btn}>
           {!showResponse ? "Ocultar Resposta" : "Mostrar Resposta"}
         </button>
-      </aside>
-
-      <div>
-        {!showResponse && (
-          <div>
-            <Response />
-          </div>
-        )}
       </div>
+
+      {!showResponse && (
+        <div>
+          <Response />
+        </div>
+      )}
     </>
   );
 }

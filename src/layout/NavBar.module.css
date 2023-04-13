@@ -1,11 +1,11 @@
 .navbar {
   margin: 0em auto;
-  padding: 1.5em;
+  padding: 1em;
   background-color: #14213d;
   width: auto;
   height: 5%;
   display: flex;
-  justify-content:space-between;
+  justify-content:space-around;
   align-items: center;
 }
 
@@ -14,7 +14,6 @@
   list-style: none;
   align-items: center;
 }
-
 
 .item {
   margin: -0.3em 0.8em;
@@ -33,15 +32,12 @@
   color: #ffffff;
 }
 
-.home {
-}
-
 .home svg:hover {
   color: #ffffff;
 }
 
 .home svg{
-  background-color: #14213db0;
+  background-color: #14213d;
   color: #fca311;
   width: 30px;
   height: 30px;

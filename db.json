@@ -8,7 +8,7 @@
       "img": {
         "id": 1,
         "caption": "código com má prática",
-        "url":"images/ex1.png"
+        "url":"/images/ex1.png"
       }
     },
     {
@@ -19,7 +19,7 @@
       "img": {
         "id": 2,
         "caption": "Erro de uso do useState",
-        "url":"src/images/ex2.png"
+        "url":"/images/ex2.png"
       }      
     },
     {
@@ -30,7 +30,7 @@
       "img": {
         "id": 3,
         "caption": "código com erro na utilização de function callback",
-        "url":""
+        "url":"/images/ex3.png"
       }      
     },
     {
@@ -40,8 +40,8 @@
       "statement": "O que está sendo feito errado no trecho de código abaixo e por que não deve ser feito?",
       "img": {
         "id": 4,
-        "caption": "código efetuando mutação de props",
-        "url":""
+        "caption": "código com má prática, mutando props",
+        "url":"/images/ex4.png"
       }      
     },
     {
@@ -52,7 +52,7 @@
       "img": {
         "id": 5,
         "caption": "código com erro no hook useEffect",
-        "url":""
+        "url":"/images/ex5.png"
       }
     },
     {
@@ -63,7 +63,7 @@
       "img": {
         "id": 6,
         "caption": "código com erro de sintaxe em função assíncrona",
-        "url":""
+        "url":"/images/ex6.png"
       }
     },
     {
@@ -74,7 +74,7 @@
       "img": {
         "id": 7,
         "caption": "codigo onde o console gera erro de key",
-        "url":""
+        "url":"/images/ex7.png"
       }
     }
   ],
@@ -87,7 +87,7 @@
       "img": {
         "id": 1,
         "caption": "resposta da questão 1",
-        "url":"src/images/resp1.png"
+        "url": "/images/resp1.png"
       }
     },
     {
@@ -97,7 +97,7 @@
       "img": {
         "id": 2,
         "caption": "resposta da questão 2",
-        "url":"src/images/resp1.png"
+        "url":"/images/resp2.png"
       }
     },
     {
@@ -107,7 +107,7 @@
       "img": {
         "id": 3,
         "caption": "resposta da questão 3",
-        "url":"src/images/resp1.png"
+        "url":"/images/resp3.png"
       }
     },
     {
@@ -115,9 +115,9 @@
       "number": 4,
       "response": "A atribuição de valor para prop.name é a má prática aplicada neste exemplo, pois vai de encontro com o conceito de imutabilidade. A mutação pode gerar erros de renderização do componente. ",
       "img": {
-        "id": 4,
-        "caption": "resposta da questão 4",
-        "url":"src/images/resp1.png"
+        "id": null,
+        "caption": null,
+        "url": null
       }
     },
     {
@@ -127,7 +127,7 @@
       "img": {
         "id": 5,
         "caption": "resposta da questão 5",
-        "url":"src/images/resp1.png"
+        "url":"/images/resp5.png"
       }
     },
     {
@@ -137,7 +137,7 @@
       "img": {
         "id": 6,
         "caption": "resposta da questão 6",
-        "url":"src/images/resp1.png"
+        "url":"/images/resp6.png"
       }
     },
     {
@@ -147,7 +147,7 @@
       "img": {
         "id": 7,
         "caption": "resposta da questão 7",
-        "url":"src/images/resp1.png"
+        "url":"/images/resp7.png"
       }
     }
   ]

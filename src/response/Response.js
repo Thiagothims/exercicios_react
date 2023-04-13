@@ -1,15 +1,14 @@
 import { useState, useEffect } from "react";
 
 import styles from "./Response.module.css";
+
 import { useParams } from "react-router-dom";
 
 function Response() {
   const { id } = useParams();
 
   const [response, setResponse] = useState([]);
-  const [showResponse, setShowResponse] = useState(true);
 
-  //
   useEffect(() => {
     fetch(`http://localhost:5000/resolutions/${id}`, {
       method: "GET",
@@ -24,13 +23,31 @@ function Response() {
       .catch((err) => console.log(err));
   }, [id]);
 
+  if (response.length === 0) {
+    return null;
+  }
+
   return (
     <>
-      <div className={styles.response}>
-        <h4>Resposta</h4>
-        <p>{response.response}</p>
-      </div>
-      {/* <img src={response.img.url} alt={`imagem do código, resposta da questão ${response.number} - ${response.img.caption}`} /> */}
+      {response.img.url !== null ? (
+        <div className={styles.response_container}>
+          <div className={styles.response}>
+            <h4>Resposta</h4>
+            <p>{response.response}</p>
+          </div>
+          <div className={styles.code}>
+            <img
+              src={response.img.url}
+              alt={`imagem do código, resposta da questão ${response.number} - ${response.img.caption}`}
+            />
+          </div>
+        </div>
+      ) : (
+        <div className={styles.response}>
+          <h4>Resposta</h4>
+          <p>{response.response}</p>
+        </div>
+      )}
     </>
   );
 }

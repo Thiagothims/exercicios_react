@@ -1,6 +1,6 @@
 .footer {
   margin: 0em auto;
-  padding: 2em;
+  padding: 1em;
   background-color: #14213d;
   text-align: center;
 }
@@ -35,4 +35,5 @@
   color: #ffffff;
   font-size: 10pt;
   margin-bottom: 1em;
+  margin-top: .5em;
 }
