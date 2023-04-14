@@ -1,13 +1,11 @@
 import { Link } from "react-router-dom";
 
 import styles from "./Home.module.css";
-import { DiReact } from "react-icons/di";
 
 function Home() {
   return (
     <section className={styles.home_container}>
       <h1>Exercicios de React</h1>
-      <DiReact />
       <div className={styles.text}>
         <p>
           Esta aplicação tem como objetivo demonstrar um pouco do aprendizado de
