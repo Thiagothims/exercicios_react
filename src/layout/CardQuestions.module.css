@@ -17,7 +17,6 @@
   color: #14213d;
   margin-bottom: 1em;
   font-weight: bolder;
-  
 }
 
 .card p {
@@ -40,4 +39,35 @@
 .card:hover p {
   color: #fca311;
   font-weight: 400;
+}
+
+@media (max-width: 650px) {
+  .card {
+    display: inline-table;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    width: 100px;
+    height: 70px;
+    background-color: #fca311;
+    margin: 0.2em;
+    padding: .5em;
+    border: 2px solid #14213d;
+    border-radius: 15px;
+    text-decoration: none;
+  }
+
+  .card h3 {
+    color: #14213d;
+    margin-bottom: 1em;
+    font-weight: bolder;
+    font-size: .8em;
+  }
+
+  .card p {
+    color: #14213d;
+    font-weight: 400;
+    font-size: .6em;
+  }  
+
 }

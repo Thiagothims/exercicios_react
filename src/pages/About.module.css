@@ -46,3 +46,90 @@
 .article span {
   font-weight: bold;
 }
+
+
+@media (max-width: 1200px) {
+  .header {
+    width: 1000px;
+    margin: 0 auto;
+  }
+  .article {
+    width: 1000px;
+    margin: 0 auto;
+  }
+  .article p {
+    font-size: 1em;
+    color: #14213d;
+    margin-top: 0.7em;
+    margin-bottom: 0.7em;
+    text-align: justify;
+  }
+  .article li {
+    font-size: 0.8em;
+    color: #14213d;
+    margin-bottom: .5em;
+    text-align: justify;
+    list-style: none;
+  }
+
+}
+
+@media (max-width: 1025px) {
+  .header {
+    width: 700px;
+    margin: 0 auto;
+  }
+  .article {
+    width: 700px;
+    margin: 0 auto;
+  }
+  .article p {
+    font-size: 0.6em;
+    color: #14213d;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    text-align: justify;
+  }
+  .article li {
+    font-size: 0.5em;
+    color: #14213d;
+    margin-bottom: .3em;
+    text-align: justify;
+    list-style: none;
+  }
+}
+
+
+@media (max-width: 769px) {
+  .header {
+    width: 500px;
+    margin: 0 auto;
+  }
+  .article {
+    width: 500px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 481px) {
+  .header {
+    width: 350px;
+    margin: 0 auto;
+  }
+  .article {
+    width: 350px;
+    margin: 0 auto;
+  }
+  
+}
+
+@media (max-width: 320px) {
+  .header {
+    width: 400px;
+    margin: 0 auto;
+  }
+  .article {
+    width: 300px;
+    margin: 0 auto;
+  }
+}
