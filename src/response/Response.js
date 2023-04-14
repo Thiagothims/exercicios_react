@@ -13,7 +13,7 @@ function Response() {
 
   useEffect(() => {
     setTimeout(() => {
-      fetch(`http://localhost:5000/resolutions/${id}`, {
+      fetch(`https://db-json-exreact.vercel.app/resolutions/${id}`, {
         method: "GET",
         headers: {
           "Content-Type": "application/json",

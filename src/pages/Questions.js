@@ -11,7 +11,7 @@ function Questions() {
 
   useEffect(() => {
     setTimeout(() => {
-      fetch("https://exerciciosreact.netlify.app//questions", {
+      fetch("https://db-json-exreact.vercel.app/questions", {
         method: "GET",
         headers: {
           "Content-Type": "aplication/json",

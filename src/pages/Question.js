@@ -15,7 +15,7 @@ function Question() {
 
   useEffect(() => {
     setTimeout(() => {
-      fetch(`http://localhost:5000/questions/${id}`, {
+      fetch(`https://db-json-exreact.vercel.app/questions${id}`, {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
@@ -59,6 +59,7 @@ function Question() {
             {!showResponse ? "Ocultar Resposta" : "Mostrar Resposta"}
           </button>
         </div>
+
         <div className={styles.btn}>
           <Link to={"/questions"}>
             <button>Voltar para Questões</button>
