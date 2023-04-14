@@ -15,7 +15,7 @@ function Question() {
 
   useEffect(() => {
     setTimeout(() => {
-      fetch(`https://db-json-exreact.vercel.app/questions//:resource/:id`, {
+      fetch(`https://db-json-exreact.vercel.app/questions/:resource/:id`, {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
