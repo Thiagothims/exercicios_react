@@ -11,7 +11,7 @@ function Questions() {
 
   useEffect(() => {
     setTimeout(() => {
-      fetch("http://localhost:5000/questions", {
+      fetch("https://exerciciosreact.netlify.app//questions", {
         method: "GET",
         headers: {
           "Content-Type": "aplication/json",
